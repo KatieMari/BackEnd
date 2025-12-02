@@ -14,12 +14,12 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// hello world route
+// Hello World Route
 app.get("/", (req: Request, res: Response) => {
   res.send({ message: "Hello World!" });
 });
 
-// calculator route
+// Calculator Route
 app.use("/api/calculate", calculateRoute);
 
 app.listen(port, () => {
