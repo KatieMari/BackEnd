@@ -4,11 +4,10 @@
   "description": "https://medium.com/@surajshende247/beginner-guide-to-setting-up-typescript-node-express-project-7ba0689ea94e",
   "main": "index.js",
   "scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-  "build": "tsc",
-  "start": "node dist/server.js"
-}
-,
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,7 +25,6 @@
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "mongoose": "^9.0.0",
-    "node": "^25.1.0"
+    "mongoose": "^9.0.0"
   }
 }
