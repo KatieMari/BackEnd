@@ -68,9 +68,82 @@ This list contains the main folders and files for the **BackEnd**.
 ## API Endpoints
 
 Health Check
-```html
+``` ts
 GET /
 ```
+- Returns a simple responce to confirm the server is running
+
+Responce
+```JSON
+{ "message": "Hello World!" }
+```
+
+---
+
+## Water FootPrint Calculation
+
+```ts
+POST /api/calculate
+```
+
+Accepts user water usage data and returns and estimated daily footprint
+
+Example request body:
+```JSON
+{
+  "showersPerWeek": 7,
+  "avgShowerMinutes": 10,
+  "laundryLoadsPerWeek": 3,
+  "diet": "balanced"
+}
+```
+Example Responce:
+```JSON
+{
+  "totalLitresPerDay": 140,
+  "breakdown": {
+    "showerLitres": 100,
+    "laundryLitres": 40,
+    "dietMultiplier": 1
+  },
+  "advice": [
+    "Try shorter showers to reduce water use.",
+    "Your diet has a moderate water impact."
+  ]
+}
+```
+
+---
+
+## Contribution Rules
+
+The following conventions are used throughout the backend codebase
+
+### Coding Style
+
+- Use **TypeScript** for all source files
+- Use `export deault` where appropiate
+- Use **camelCase** for variables and functions
+- Use **PascalCase** for types, interfaces, and models
+
+---
+
+## Data Handling
+
+- Request bodies are validated through type conversion
+- Numeric values are safely converted using `Number()`
+- Default values are applied where required
+- Calculations are isolated from **Express** routing logic
+
+---
+
+## Dependencies
 
 
+---
 
+## Useful Links
+- [Express Documentation](https://devdocs.io/express/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Node.js Documentation](https://nodejs.org/docs/latest/api/)
+- [Mongoose Documentation](https://mongoosejs.com/docs/)
