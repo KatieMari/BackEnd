@@ -139,6 +139,19 @@ The following conventions are used throughout the backend codebase
 
 ## Dependencies
 
+The backend relies on the following main libraries and tools:
+
+- [Express](https://devdocs.io/express/) – web framework used to create the REST API and define routes
+
+- [CORS](https://expressjs.com/en/resources/middleware/cors.html) – enables cross-origin requests from the frontend application
+
+- [Body-Parser](https://expressjs.com/en/resources/middleware/body-parser.html) – parses incoming JSON and URL-encoded request bodies
+
+- [TypeScript](https://www.typescriptlang.org/docs/) – adds static typing and improves code reliability
+
+- [Mongoose](https://mongoosejs.com/docs/) – defines data schemas and models for optional database storage
+
+- [Nodemon](https://www.npmjs.com/package/nodemon) – automatically restarts the server during development
 
 ---
 
