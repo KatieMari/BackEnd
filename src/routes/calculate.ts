@@ -18,12 +18,7 @@ interface CalculateBody {
 // Calculates a user's Estimated Daily Water Footprint based on Showering, Laundry Habits and Diet
 function calculateFootprint(data: CalculateBody) {
   // Destructure Input Data from Request Body
-  const {
-    showersPerWeek,
-    avgShowerMinutes,
-    laundryLoadsPerWeek,
-    diet,
-  } = data;
+  const {showersPerWeek, avgShowerMinutes, laundryLoadsPerWeek, diet,} = data;
 
   // Convert all Numeric Inputs to Numbers - Handles String Inputs
   const showers = Number(showersPerWeek);
